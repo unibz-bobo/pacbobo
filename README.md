@@ -7,3 +7,12 @@ like `pacman`, ie. `pacbobo -Syu`, `pacbobo -S <package-name>` ect.
 
 For further details see also the archlinux wiki article about
 [unofficial user repositories](https://wiki.archlinux.org/index.php/unofficial_user_repositories).
+
+Required Packages for Building
+------------------------------
+* base-devel
+
+First Install
+-------------
+To install pacbobo on a fresh system you will need to execute
+`sudo pacman -U pacbobo*.pkg.tar.xz`
