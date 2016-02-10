@@ -1,0 +1,11 @@
+#!/bin/bash
+PACMAN_CUSTOM_CONFIG_FILE='/etc/pacman-bobo.conf'
+cp /etc/pacman.conf "$PACMAN_CUSTOM_CONFIG_FILE"
+cat << 'EOF' >> "$PACMAN_CUSTOM_CONFIG_FILE"
+[bobo]
+SigLevel = Optional TrustAll
+Server = http://unibz-bobo.github.io/archlinuxarm/pkgs/$arch/$repo
+EOF
+command="pacman --config $PACMAN_CUSTOM_CONFIG_FILE $@"
+$command
+exit 0
