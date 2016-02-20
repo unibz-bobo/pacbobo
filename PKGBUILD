@@ -2,15 +2,15 @@
 
 pkgname=pacbobo
 pkgver=1.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Custom pacman package manager for Arch Linux ARM"
 arch=("any")
 url="https://github.com/unibz-bobo/pacbobo"
 license=("MIT")
 depends=("pacman")
 source=("LICENSE" "$pkgname")
-md5sums=("292e0d6c7f6827b97f4defdd9e99a7a3"
-         "3b9b6d9badaa892ccb980c25c8cb150c")
+md5sums=('c2452e9972a32a82dc876de06b775145'
+         'f78d20bb73c702f02d5169203f1bd769')
 
 package() {
   install -o root -g root -Dm755 "$pkgname" "$pkgdir/usr/bin/pacbobo"

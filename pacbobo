@@ -8,4 +8,4 @@ Server = http://unibz-bobo.github.io/archlinuxarm/pkgs/$arch/$repo
 EOF
 command="pacman --config $PACMAN_CUSTOM_CONFIG_FILE $@"
 $command
-exit 0
+exit $?
